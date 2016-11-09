@@ -13,7 +13,3 @@ class Algorithm:
 		memory = [self.pages[x] for x in range(0, self.blocks)]
 		self.removeChuncks(self.pages, 0, self.blocks)
 		return memory
-
-	def result(self, algorithm):
-		print(algorithm + str(self.missingPages))
-
