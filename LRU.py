@@ -7,6 +7,7 @@ class LRU(Algorithm):
 			del stack[index]
 		except ValueError:
 			pass
+
 		stack.append(element)
 		
 
@@ -17,9 +18,8 @@ class LRU(Algorithm):
 
 		for locale in range(0, len(self.pages)):
 			self.refactorStack(stack, self.pages[locale])
-
 			if not (self.pages[locale] in memory):
-				memory[memory.index(stack[0])] = self.pages[locale]
+				memory[memory.index(stack[-(self.blocks+1)])] = self.pages[locale]
 				self.missingPages = self.missingPages + 1
 
 	def __repr__(self):
