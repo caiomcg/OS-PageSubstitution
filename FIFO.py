@@ -21,7 +21,6 @@ class FIFO:
 		self.removeChuncks(self.pages, 0, self.blocks)
 
 		for data in self.pages:
-			print(str(data) + " " + str(memory))
 			if not (data in memory):
 				memory[looper] = data
 				self.missingPages = self.missingPages + 1

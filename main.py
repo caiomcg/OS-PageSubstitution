@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from fifo import FIFO
+from FIFO import FIFO
 
 def getData():
 	data = []
