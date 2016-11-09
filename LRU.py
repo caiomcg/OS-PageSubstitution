@@ -13,13 +13,13 @@ class LRU(Algorithm):
 
 
 	def run(self):
-		memory  = Algorithm.prepareMemory(self)
-		stack   = list(memory)
+		pageFrames  = Algorithm.prepareMemory(self)
+		stack   = list(pageFrames)
 
 		for locale in range(0, len(self.pages)):
 			self.refactorStack(stack, self.pages[locale])
-			if not (self.pages[locale] in memory):
-				memory[memory.index(stack[-(self.blocks+1)])] = self.pages[locale]
+			if self.pages[locale] not in pageFrames:
+				pageFrames[pageFrames.index(stack[-(self.blocks+1)])] = self.pages[locale]
 				self.missingPages = self.missingPages + 1
 
 	def __repr__(self):

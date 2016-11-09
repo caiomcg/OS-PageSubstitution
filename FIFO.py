@@ -4,11 +4,11 @@ class FIFO(Algorithm):
 	def run(self):
 		looper = 0
 
-		memory = Algorithm.prepareMemory(self)
+		pageFrames = Algorithm.prepareMemory(self)
 
 		for data in self.pages:
-			if not (data in memory):
-				memory[looper] = data
+			if data not in pageFrames:
+				pageFrames[looper] = data
 				self.missingPages = self.missingPages + 1
 				looper = looper + 1
 			if looper == self.blocks:

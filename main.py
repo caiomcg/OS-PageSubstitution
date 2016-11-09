@@ -18,5 +18,5 @@ if __name__ == "__main__":
 	otm.run()
 	
 	print(fifo)
-	print(lru)
 	print(otm)
+	print(lru)
