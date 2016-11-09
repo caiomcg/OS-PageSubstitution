@@ -1,24 +1,10 @@
-#!/usr/bin/env python
+from Algorithm import Algorithm
 
-class FIFO:
-	def __init__(self, input = []):
-		if not input:
-			raise ValueError("The list must not be empty")
-		self.blocks = input[0]
-		self.pages = input[1:]
-		self.missingPages = self.blocks
-
-	def removeChuncks(self, list, start, stop):
-		del list[start:stop]
-
+class FIFO(Algorithm):
 	def run(self):
-		memory = []
 		looper = 0
 
-		for i in range(0, self.blocks):
-			memory.append(self.pages[i])
-
-		self.removeChuncks(self.pages, 0, self.blocks)
+		memory = Algorithm.prepareMemory(self)
 
 		for data in self.pages:
 			if not (data in memory):
@@ -28,12 +14,5 @@ class FIFO:
 			if looper == self.blocks:
 				looper = 0
 
-
-
 	def __repr__(self):
 		return "FIFO " + str(self.missingPages)
-
-	def __str__(self):
-		return "FIFO " + str(self.missingPages)
-
-
