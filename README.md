@@ -1,5 +1,7 @@
 # OS-PageSubstitution
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/caiomcg/OS-PageSubstitution/master/LICENSE)
+
 A python simulation of FIFO(First In, First Out), OTM(Optimum Algorithm) and LRU(Least Recently Used) page substitution algorithms.
 
 ## Requirements ##
