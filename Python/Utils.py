@@ -41,7 +41,7 @@ class Utils:
 		-------
 		list
 			A list containing the user input.
-    	"""
+		"""
 		data = []
 
 		while True:

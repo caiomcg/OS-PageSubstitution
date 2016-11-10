@@ -46,9 +46,9 @@ class LRU(Algorithm):
 		----------
 		stack : list
 			List representing the stack
-    	element : int
-    		The element to be refactored
-    	"""
+		element : int
+			The element to be refactored
+		"""
 		try:
 			index = stack.index(element) #Get the element index in the stack.
 			del stack[index] #Delete the element from the stack
@@ -62,7 +62,7 @@ class LRU(Algorithm):
 	def run(self):
 		"""
 		Run the algorithm.
-    	"""
+		"""
 		pageFrames  = Algorithm.preparePageFrame(self) #Get the initialized page frames.
 		stack   = list(pageFrames) #A copy of the page frames to be used as the stack.
 
@@ -80,5 +80,5 @@ class LRU(Algorithm):
 		-------
 		string
 			The amount of missing pages for the algorithm
-    	"""
+		"""
 		return "LRU " + str(self.missingPages)

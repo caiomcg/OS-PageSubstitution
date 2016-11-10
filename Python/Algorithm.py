@@ -42,7 +42,7 @@ class Algorithm:
 		-------
 		list
 			The list with initialized Page frames
-    	"""
+		"""
 		pageFrame = [self.pages[x] for x in range(0, self.blocks)] #Create the page frame with elements passed by the user.
 		self.removeChuncks(self.pages, 0, self.blocks) #Remove part of the list that is on the page frame
 		return pageFrame #Return the list

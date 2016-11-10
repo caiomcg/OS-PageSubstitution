@@ -37,7 +37,7 @@ class FIFO(Algorithm):
 	def run(self):
 		"""
 		Run the algorithm.
-    	"""
+		"""
 		looper = 0 #Auxiliar variable that loops through the page frames.
 
 		pageFrames = Algorithm.preparePageFrame(self) #Get the initialized page frames.
@@ -57,5 +57,5 @@ class FIFO(Algorithm):
 		-------
 		string
 			The amount of missing pages for the algorithm
-    	"""
+		"""
 		return "FIFO " + str(self.missingPages)

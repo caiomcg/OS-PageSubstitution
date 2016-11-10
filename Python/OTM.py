@@ -47,8 +47,8 @@ class OTM(Algorithm):
 		----------
 		elements : list
 			The elements to locate at the queue
-    	queue : list
-    		The queue where the elements are mainteined.
+		queue : list
+			The queue where the elements are mainteined.
 
 		Returns
 		-------
@@ -71,7 +71,7 @@ class OTM(Algorithm):
 	def run(self):
 		"""
 		Run the algorithm.
-    	"""
+		"""
 		pageFrames  = Algorithm.preparePageFrame(self) #Get the initialized page frames.
 
 		for locale in range(0, len(self.pages)): #Iterate through the pages to be swapped.
@@ -89,5 +89,5 @@ class OTM(Algorithm):
 		-------
 		string
 			The amount of missing pages for the algorithm
-    	"""
+		"""
 		return "OTM " + str(self.missingPages)
