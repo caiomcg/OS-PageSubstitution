@@ -43,6 +43,14 @@ class Algorithm:
 		list
 			The list with initialized Page frames
 		"""
-		pageFrame = [self.pages[x] for x in range(0, self.blocks)] #Create the page frame with elements passed by the user.
-		self.removeChuncks(self.pages, 0, self.blocks) #Remove part of the list that is on the page frame
+		pageFrame = [None] * self.blocks #Create the page frame with elements passed by the user.
+		iterator = 0
+		for i in range(0, len(self.pages)):
+			if self.pages[i] not in pageFrame:
+				pageFrame[iterator] = self.pages[i]
+				iterator = iterator + 1
+				if iterator == self.blocks:
+					self.removeChuncks(self.pages, 0, i) #Remove part of the list that is on the page frame
+					break
+
 		return pageFrame #Return the list
