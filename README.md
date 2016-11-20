@@ -37,9 +37,15 @@ $> ./main.py < input.txt
 ```
 $> cd OS-PageSubstitution
 $> ./main.py
-$> 0 20
-$> 0 10
-$> 4 6
-$> 4 8
+$> 4
+$> 4
+$> 2
+$> 3
+$> 5
+$> 1
+$> 2
+$> 2
+$> 3
+$> 4
 $> CTRL + D
 ```
